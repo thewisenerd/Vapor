@@ -16,6 +16,12 @@
 
     {{#if pagination.next}}<link href="{{page_url pagination.next}}" rel="prefetch" />{{/if}}
 
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="{{asset "js/un_quote.js"}}"></script>
+    <script type='text/javascript' src="{{asset "js/youtube_embed.js"}}"></script>
+    <script type='text/javascript' src="{{asset "js/twitterFetcher.js"}}"></script>
+    <script type='text/javascript' src="{{asset "js/shell.js"}}"></script>
+
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
@@ -32,6 +38,7 @@
     <footer class="site-footer">
         <div class="inner">
             {{!> footer-description}}
+            <div id="footerquote"><q id="currentquote"></q></div>
             <section class="copyright">&copy; {{date format="YYYY"}} <a href="/">{{@blog.title}}</a>. All rights reserved.</section>
             <section>Vapor theme by <a href="http://sethlilly.com/">Seth Lilly</a></section>
             <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org/"><span class="hidden">Ghost</span></a></section>
